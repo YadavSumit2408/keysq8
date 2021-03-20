@@ -12,6 +12,8 @@ workflows:
             cocoapods: default
         scripts:
             - xcodebuild build -workspace "$XCODE_WORKSPACE.xcworkspace" -scheme "$XCODE_SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            - xcode-project build-ipa --project "keysq8.xcodeproj" --scheme "MyScheme"
         artifacts:
-            - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+            - build/ios/ipa/*.ipa
+            - /tmp/xcodebuild_logs/*.log
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
