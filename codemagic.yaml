@@ -12,8 +12,8 @@ workflows:
             cocoapods: default
         scripts:
             - xcode-project build-ipa --project "keysq8.xcodeproj" --scheme "MyScheme"
-   artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+       artifacts:
+         - build/ios/ipa/*.ipa
+         - /tmp/xcodebuild_logs/*.log
+         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
        
