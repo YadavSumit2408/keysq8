@@ -13,5 +13,6 @@ workflows:
         scripts:
             - xcode-project build-ipa --project "MyXcodeProject.xcodeproj" --scheme "MyScheme"
         artifacts:
-            - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
-            - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+             - build/ios/ipa/*.ipa
+             - /tmp/xcodebuild_logs/*.log
+             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
