@@ -12,7 +12,7 @@ workflows:
             cocoapods: default
         scripts:
            
-            - xcode-project build-ipa --project "keysq8.xcodeproj" --scheme "MyScheme"
+            - xcodebuild build -project "MyXcodeProject.xcodeproj" -scheme "MyScheme" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         artifacts:
             - build/ios/ipa/*.ipa
             - /tmp/xcodebuild_logs/*.log
